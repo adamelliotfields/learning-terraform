@@ -1,0 +1,1 @@
+variable "rsa_public" {}
