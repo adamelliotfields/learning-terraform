@@ -4,6 +4,7 @@ data "docker_registry_image" "ghost" {
 
 resource "docker_image" "ghost" {
   name = data.docker_registry_image.ghost.name
+  keep_locally = true
 }
 
 resource "docker_volume" "ghost" {

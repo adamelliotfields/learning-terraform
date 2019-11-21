@@ -4,6 +4,7 @@ data "docker_registry_image" "mysql" {
 
 resource "docker_image" "mysql" {
   name = data.docker_registry_image.mysql.name
+  keep_locally = true
 }
 
 resource "docker_volume" "mysql" {
